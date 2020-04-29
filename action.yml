@@ -1,27 +1,20 @@
-name: 'AWS SSM Send-Command'
-author: 'Donghyun Peter Kim <peterkimzz69@gmail.com>'
+name: 'AWS SSM Run Command via Document via Send-Command'
+author: 'Bjorn Nordstrand <bjorn@def-end.se>'
 
 branding:
   icon: 'arrow-up-right'
   color: 'orange'
 
-description: 'Remote EC2 bash command execution.'
+description: 'Remote SSM document execution.'
 
 inputs:
   instance_ids:
     required: true
     description: 'AWS EC2 Instance id'
-  commands:
-    required: true
-    description: 'Bash command you want to execute'
   document_name:
-    required: false
+    required: true
     description: 'Script Environment'
     default: 'AWS-RunShellScript'
-  working_directory:
-    required: false
-    description: 'Command execution location'
-    default: '/home/ubuntu'
   comment:
     required: false
     description: 'Comment for Send-Command'
